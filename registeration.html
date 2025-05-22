@@ -1,0 +1,145 @@
+<!-- start -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Registration Celebal Technologies</title>
+  <!-- Added CSS for styling, including centering, colouring, make a container card -->
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #f4f7f8;
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background: #fae7b0;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 800px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 1.5rem;
+      font-size: 1.75rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1rem;
+    }
+
+    .form-group label {
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: #555;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      padding: 0.6rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: #007BFF;
+      outline: none;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1.5rem;
+    }
+
+    .actions button {
+      flex: 1;
+      padding: 0.75rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .actions button + button {
+      margin-left: 0.5rem;
+    }
+
+    .actions button[type="submit"] {
+      background: #007BFF;
+      color: #fff;
+    }
+
+    .actions button[type="submit"]:hover {
+      background: #0056b3;
+    }
+
+    .actions button[type="reset"] {
+      background: #6c757d;
+      color: #fff;
+    }
+
+    .actions button[type="reset"]:hover {
+      background: #5a6268;
+    }
+  </style>
+</head>
+<!-- Added a form with various input fields for user registration -->
+<body>
+  <div class="container">
+    <h1>Register</h1>
+    <form id="registration-form">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input id="username" type="text" name="username" required />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" type="email" name="email" required />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input id="password" type="password" name="password" required minlength="6" />
+      </div>
+
+      <div class="form-group">
+        <label for="birthdate">Birthdate</label>
+        <input id="birthdate" type="date" name="birthdate" required />
+      </div>
+
+      <div class="form-group">
+        <label for="address">Address</label>
+        <textarea id="address" name="address" rows="3" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input id="phone" type="tel" name="phone" pattern="[0-9]{10}" placeholder="1234567890" required />
+      </div>
+
+      <div class="actions">
+        <button type="submit">Submit</button>
+        <button type="reset">Cancel</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
+<!-- end -->
