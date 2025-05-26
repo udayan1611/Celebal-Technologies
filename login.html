@@ -3,27 +3,48 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Login – Celebal Technologies</title>
+  <title>Project Login Assignment – Celebal Technologies</title>
   <link rel="stylesheet" href="login.css"/>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" 
+    rel="stylesheet"
+  />
+  <link 
+    rel="stylesheet" 
+    href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" 
+  />
 </head>
 <body>
   <div class="page-wrapper">
     <header>
       <h1>Celebal Technologies</h1>
-      <h2>Project - Login Assignment</h2>
+      <h2>Project – Login Assignment</h2>
     </header>
-    <div class="login-container">
-      <form id="login-form" novalidate>
+    <div class="form_container">
+      <!-- changed div → form and added id -->
+      <form id="login-form" class="form login_form" novalidate>
+        <h2>Login</h2>
         <div id="error-msg" class="error"></div>
-        <label for="username">
-          Email
-          <input id="username" name="username" type="email" required placeholder="you@example.com"/>
-        </label>
-        <label for="password">
-          Password
-          <input id="password" name="password" type="password" required placeholder="Password1"/>
-        </label>
-        <button id="submit-btn" type="submit">Login</button>
+        <div class="input_box">
+          <input 
+            type="email" 
+            id="username" 
+            placeholder="Enter your email" 
+            required 
+          />
+          <i class="uil uil-envelope-alt email"></i>
+        </div>
+        <div class="input_box">
+          <input 
+            type="password" 
+            id="password" 
+            placeholder="Enter your password" 
+            required 
+          />
+          <i class="uil uil-lock password"></i>
+          <i class="uil uil-eye-slash pw_hide" id="toggle-pw"></i>
+        </div>
+        <button type="submit" id="submit-btn" class="button">Login Now</button>
       </form>
     </div>
   </div>
