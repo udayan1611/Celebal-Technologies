@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gurren Lagann</title>
+  <style>
+    body {
+      background: #1a0000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .gurren-box {
+      background: linear-gradient(135deg, #ff4136 0%, #ff9f1c 100%);
+      border: 8px solid #000;
+      border-radius: 16px;
+      padding: 2rem 3rem;
+      margin: 1rem;
+      box-shadow:
+        0 0 0 4px #ffdc00,
+        0 8px 20px rgba(0, 0, 0, 0.6);
+      position: relative;
+      color: #fff;
+      text-align: center;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
+    }
+    .gurren-box::before {
+      content: "GIGA DRILL BREAK!";
+      position: absolute;
+      top: -1.2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #000;
+      color: #ffdc00;
+      padding: 0.2rem 0.6rem;
+      font-size: 0.8rem;
+      border-radius: 4px;
+    }
+    .gurren-box:hover {
+      background: linear-gradient(135deg, #ff9f1c 0%, #ff4136 100%);
+      box-shadow:
+        0 0 0 4px #000,
+        0 12px 30px rgba(255, 220, 0, 0.8);
+      transform: scale(1.05) rotate(-1deg);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="gurren-box">
+    Believe in the you that believes in me!
+  </div>
+
+</body>
+</html>
