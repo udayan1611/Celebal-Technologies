@@ -1,1 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+  <title>Best Anime by Udayan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    :root {
+
+      --color-primary: #1b2430;
+      --color-secondary: #000000;
+      --color-bg: #0f1419;
+      --color-light: #ffffff;
+      --spacing: 1rem;
+      --radius: 12px;
+      --transition: 0.3s ease;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      background-color: var(--color-bg);
+      color: var(--color-primary);
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background: linear-gradient(135deg, #1b2430, #e55039);
+      color: var(--color-light);
+      padding: var(--spacing) calc(2 * var(--spacing));
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      font-family: 'Pacifico', cursive;
+      font-weight: 600;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: var(--spacing);
+    }
+    nav a {
+      position: relative;
+      color: var(--color-light);
+      text-decoration: none;
+      margin: 0 var(--spacing);
+      padding: 0.5rem var(--spacing);
+      font-weight: 500;
+      transition: var(--transition);
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 2px;
+      background: var(--color-secondary);
+      transition: width var(--transition);
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+    nav a:hover {
+      transform: scale(1.1);
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: var(--spacing);
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: var(--spacing);
+      flex: 1;
+    }
+    main, aside {
+      background: var(--color-light);
+      padding: calc(1.5 * var(--spacing));
+      border-radius: var(--radius);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    blockquote {
+      font-style: italic;
+      color: var(--color-secondary);
+      border-left: 4px solid var(--color-secondary);
+      background: rgb(255, 167, 5);
+      padding: var(--spacing);
+      margin: var(--spacing) 0;
+      border-radius: var(--radius);
+    }
+    footer {
+      background: var(--color-primary);
+      color: var(--color-light);
+      text-align: center;
+      padding: var(--spacing);
+      font-size: 0.9rem;
+      margin-top: auto;
+    }
+    @media (max-width: 768px) {
+      .container { grid-template-columns: 1fr; }
+      nav { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Best Anime by Udayan(Assignment week-4)</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+  <div class="container">
+    <main>
+      <h2>Best Anime Quotes</h2>
+      <blockquote>“I will become the Pirate King!” — Monkey D. Luffy</blockquote>
+      <blockquote>“People’s lives don’t end when they die; it ends when they lose faith.” — Itachi Uchiha</blockquote>
+      <blockquote>“When people are protecting something truly special to them, they truly can become as strong as they can be.” — Naruto Uzumaki</blockquote>
+      <blockquote>“No matter how deep the night, it always turns to day, eventually.” — Brook</blockquote>
+      <blockquote>“I’ll take a potato chip… and eat it!” — Light Yagami</blockquote>
+    </main>
+    <aside>
+      <h2>Top 10 Anime to Watch</h2>
+      <ul>
+        <li>1. Fullmetal Alchemist: Brotherhood</li>
+        <li>2. Attack on Titan</li>
+        <li>3. Death Note</li>
+        <li>4. Hunter x Hunter</li>
+        <li>5. Steins;Gate</li>
+        <li>6. Naruto</li>
+        <li>7. Demon Slayer</li>
+        <li>8. My Hero Academia</li>
+        <li>9. Cowboy Bebop</li>
+        <li>10. One Piece</li>
+      </ul>
+    </aside>
+  </div>
+  <footer>
+    <p>made with ♥ by udayan</p>
+  </footer>
+</body>
+</html>
 
