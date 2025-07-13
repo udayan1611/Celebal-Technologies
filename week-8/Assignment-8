@@ -1,0 +1,77 @@
+Question- You have made changes to multiple files in your Git repository and want to stage and commit these changes. What commands would you use to stage all the changes and commit them with a meaningful commit message?
+
+Ans- git add .
+git commit -m "Add all changes after bug fixes and feature updates"
+
+Question- You have committed changes to a wrong branch. How would you move these commits to the correct branch?
+
+Ans-
+git checkout -b correct-branch-name
+
+# Go back to the wrong branch
+git checkout main
+
+git reset --hard HEAD~2
+
+git push origin main --force
+
+
+Question- You want to create a new branch, make changes, and push the branch to the remote repository. Outline the steps you would take to create a new branch, commit changes, and push the branch to GitHub.
+
+Ans- # Create and switch to a new branch
+git checkout -b feature/new-feature
+
+# After editing your files
+git add .
+git commit -m "Implement new feature"
+
+# Push the branch to GitHub
+git push origin feature/cool-new-feature
+
+Question- You want to contribute to an open-source project hosted on GitHub.What are the steps you would follow to fork the repository, make changes, create a pull request, and collaborate with the original project?
+
+Ans - # Step 1: Fork the repo on GitHub
+# Step 2: Clone your fork locally
+git clone https://github.com/your-username/project-name.git
+cd project-name
+
+# Step 3: Create a new branch
+git checkout -b fix/issue-description
+
+# Step 4: Make changes, then:
+git add .
+git commit -m "Fix: corrects issue with header alignment"
+git push origin fix/issue-description
+
+Question- You are working on a team project, and there are conflicts between your branch and the main branch. How would you resolve these merge conflicts? Provide the necessary commands and steps.
+
+Ans - # Make sure you're on your working branch
+git checkout your-branch
+
+git pull origin main
+
+
+Question- You want to create a feature branch based on the latest changes in the main branch. What commands would you use to create a new branch and automatically switch to it, ensuring it's up to date with the latest changes from the main branch?
+
+Ans- git add .
+git commit -m "Resolve merge conflicts with main"
+git push origin your-branch
+
+
+Question- You have made a series of commits, but you realize that a change made several commits ago is causing issues in your application. How would you revert to a specific commit, discarding all changes made after that commit?
+
+Ans - # View commit history to find the commit hash
+git log
+
+# Reset to the chosen commit (this deletes all commits after it!)
+git reset --hard <commit-hash>
+
+
+Question- You have accidentally deleted a file in your Git repository and committed the change. What commands would you use to restore the deleted file from the previous commit?
+
+Ans - # Restore the file from the commit before it was deleted
+git checkout HEAD^ -- path/to/deleted-file
+
+# Recommit the file
+git add path/to/deleted-file
+git commit -m "Restore deleted file"
